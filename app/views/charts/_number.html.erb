@@ -1,3 +1,10 @@
-Number
+<section class="chart chart--number">
+  <header class="chart__title chart_title--number">
+    <%= dataset[:title] %>
+  </header>
+  <div class="chart__data chart__data--number">
+    <%= dataset[:data] %>
+  </div>
+</section>
 
 <%= render partial: 'charts/json', locals: { dataset: dataset } %>

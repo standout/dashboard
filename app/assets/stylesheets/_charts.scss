@@ -1,0 +1,21 @@
+.chart {
+  &--number {
+    background: $red;
+    color: $white;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    margin: 0.5rem;
+    box-shadow: 0.1rem 0.1rem 0.3rem rgba(black, 0.4);
+  }
+
+  &__title {
+    padding: 0.5rem;
+  }
+
+  &__data {
+    &--number {
+      font-size: 5rem;
+    }
+  }
+}
