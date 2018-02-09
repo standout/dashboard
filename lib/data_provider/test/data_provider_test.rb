@@ -19,4 +19,10 @@ class DataProviderTest < Minitest::Test
     DataProvider.register :github, GitHubProvider, username: 'standout'
     assert_equal 'standout', DataProvider.providers[:github].options[:username]
   end
+
+  def test_get_provider_by_string
+    DataProvider.register :github, GitHubProvider
+    assert_instance_of DataProvider::Provider, DataProvider.providers['github']
+  end
+
 end
