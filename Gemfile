@@ -38,6 +38,8 @@ gem 'redis-rails', '~> 5.0'
 
 # Fetch data from FrontApp. Intended for display in a dashboard app.
 gem 'front_data_provider', github: 'standout/front_data_provider'
+# Fetch data from Billogram. Intended for display in a dashboard app.
+gem 'billogram_data_provider', github: 'standout/billogram_data_provider'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
