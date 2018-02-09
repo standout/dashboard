@@ -3,5 +3,5 @@ window.addEventListener('turbolinks:load', () => {
 
   setTimeout(() => {
     Turbolinks.visit(`/?provider=${window.nextProvider}`)
-  }, 2000)
+  }, dashboardCycleSeconds * 1000)
 })
