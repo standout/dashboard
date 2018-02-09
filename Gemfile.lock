@@ -1,25 +1,25 @@
 GIT
-  remote: https://github.com/standout/billogram_data_provider.git
+  remote: git@github.com:standout/billogram_data_provider.git
   revision: 903a5015bd28ab9e3efbe9b79eeb0c89b0d53e90
   specs:
     billogram_data_provider (0.1.0)
       httparty
 
 GIT
-  remote: https://github.com/standout/data_provider.git
+  remote: git@github.com:standout/data_provider.git
   revision: ac926894c06161a7772267dce89b13a6a8b48d8e
   specs:
     data_provider (0.1.0)
 
 GIT
-  remote: https://github.com/standout/front_data_provider.git
+  remote: git@github.com:standout/front_data_provider.git
   revision: d0c653b111feeb316b77fa8c0754456a2f4ce135
   specs:
     front_data_provider (1.0.0)
       httparty (~> 0.15)
 
 GIT
-  remote: https://github.com/standout/github_data_provider.git
+  remote: git@github.com:standout/github_data_provider.git
   revision: 342d51b2229d1a8f3a8105ed0a1bb665807934e1
   specs:
     github_data_provider (0.1.0)
@@ -250,4 +250,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.16.0.pre.3
+   1.16.1
