@@ -1,0 +1,15 @@
+#json {
+  position: absolute;
+  top: 1rem;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  z-index: 1;
+  background: $white;
+  box-shadow: 0 0 1rem rgba($black, 0.4);
+  padding: 1rem;
+}
+
+.hidden-json-data {
+  display: none;
+}

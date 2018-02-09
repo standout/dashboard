@@ -10,5 +10,8 @@
 
   <body>
     <%= yield %>
+    <% if Rails.env.development? %>
+      <div id="json" class="hidden"></div>
+    <% end %>
   </body>
 </html>
