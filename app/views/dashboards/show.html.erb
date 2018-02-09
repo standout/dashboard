@@ -1,1 +1,5 @@
-<%= @data %>
+<div class="dashboard">
+  <% @data.each do |dataset| %>
+    <%= render partial: "charts/#{dataset[:type]}", locals: { dataset: dataset } %>
+  <% end %>
+</div>
