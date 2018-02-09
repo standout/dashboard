@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/standout/billogram_data_provider.git
-  revision: 981bf01e22ae5056ee49b19a1cd323018d1d0b89
+  revision: 903a5015bd28ab9e3efbe9b79eeb0c89b0d53e90
   specs:
     billogram_data_provider (0.1.0)
       httparty
@@ -13,14 +13,14 @@ GIT
 
 GIT
   remote: https://github.com/standout/front_data_provider.git
-  revision: 2b0280c9d781a5b9719737aa2d954a0faf94cd79
+  revision: d0c653b111feeb316b77fa8c0754456a2f4ce135
   specs:
     front_data_provider (1.0.0)
       httparty (~> 0.15)
 
 GIT
   remote: https://github.com/standout/github_data_provider.git
-  revision: bab0b5fecc7c8ef1df96c8a1c45d6a06558e018f
+  revision: 342d51b2229d1a8f3a8105ed0a1bb665807934e1
   specs:
     github_data_provider (0.1.0)
 
