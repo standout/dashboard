@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-class DashboardsController < ActionController::Base
+class DashboardsController < ApplicationController
+  layout 'application'
+
   def show
     @data = [
       {
