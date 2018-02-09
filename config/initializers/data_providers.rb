@@ -12,4 +12,5 @@ DataProvider.register :front,
                       token: Rails.application.secrets.front_token
 
 DataProvider.register :not_found,
-                      NotFoundProvider
+                      NotFoundDataProvider,
+                      cache: Rails.cache
