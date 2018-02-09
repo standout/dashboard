@@ -36,6 +36,8 @@ gem 'jbuilder', '~> 2.5'
 # Redis stores for Ruby on Rails http://redis-store.org/redis-rails
 gem 'redis-rails', '~> 5.0'
 
+# Authoritative library for registering new data providers.
+gem 'data_provider', github: 'standout/data_provider'
 # Fetch data from FrontApp. Intended for display in a dashboard app.
 gem 'front_data_provider', github: 'standout/front_data_provider'
 # Fetch data from Billogram. Intended for display in a dashboard app.

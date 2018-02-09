@@ -6,6 +6,12 @@ GIT
       httparty
 
 GIT
+  remote: https://github.com/standout/data_provider.git
+  revision: ac926894c06161a7772267dce89b13a6a8b48d8e
+  specs:
+    data_provider (0.1.0)
+
+GIT
   remote: https://github.com/standout/front_data_provider.git
   revision: 2b0280c9d781a5b9719737aa2d954a0faf94cd79
   specs:
@@ -223,6 +229,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   chart-js-rails
   coffee-rails (~> 4.2)
+  data_provider!
   front_data_provider!
   github_data_provider!
   jbuilder (~> 2.5)
