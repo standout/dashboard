@@ -18,7 +18,7 @@ run.config:
 
 deploy.config:
   extra_steps:
-    - rake assets:precompile RAILS_ENV=production
+    - rake assets:precompile
   before_live:
     web.main:
       - rails db:create
