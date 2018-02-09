@@ -3,3 +3,7 @@
     <%= render partial: "charts/#{dataset[:type]}", locals: { dataset: dataset } %>
   <% end %>
 </div>
+
+<script>
+  window.nextProvider = <%= @next_provider.to_json.html_safe %>
+</script>
