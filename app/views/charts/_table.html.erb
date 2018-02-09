@@ -44,7 +44,5 @@ window.addEventListener('turbolinks:load', function () {
 </script>
 
 <% if Rails.env.development? %>
-  <pre>
-    <%= JSON.pretty_generate(@dataset) %>
-  </pre>
+  <pre><%= JSON.pretty_generate(dataset) %></pre>
 <% end %>
