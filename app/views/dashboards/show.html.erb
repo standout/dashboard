@@ -1,1 +1,3 @@
-<%= @data %>
+<% @data.each do |dataset| %>
+  <%= render "charts/#{dataset[:type]}" %>
+<% end %>
