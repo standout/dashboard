@@ -50,5 +50,11 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test do
+  # Due to an incompability between Rails and Minitest 5.11, we enforce a
+  # specific version. See https://github.com/seattlerb/minitest/issues/730.
+  gem 'minitest', '5.10.3'
+end
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
