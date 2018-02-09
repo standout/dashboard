@@ -1,0 +1,6 @@
+<% if Rails.env.development? %>
+  <details open>
+    <summary>data</summary>
+    <pre><%= JSON.pretty_generate(dataset) %></pre>
+  </details>
+<% end %>

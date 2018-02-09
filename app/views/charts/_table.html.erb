@@ -43,6 +43,4 @@ window.addEventListener('turbolinks:load', function () {
 })
 </script>
 
-<% if Rails.env.development? %>
-  <pre><%= JSON.pretty_generate(dataset) %></pre>
-<% end %>
+<%= render partial: 'charts/json', locals: { dataset: dataset } %>
