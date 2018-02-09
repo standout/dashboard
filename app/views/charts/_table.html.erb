@@ -1,6 +1,6 @@
+<p class="chart table-header"><%= dataset[:title].upcase %></p>
 <section class="chart chart--table">
-  <canvas id="myChart" width="400" height="400"></canvas>
-
+  <canvas class="chart--table__canvas" width="400" height="400"></canvas>
   <script>
     window.jsonDataset = <%= dataset.to_json.html_safe %>;
   </script>
