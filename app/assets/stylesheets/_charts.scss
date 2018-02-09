@@ -1,7 +1,7 @@
 .chart {
   border-radius: 0.5rem;
   text-align: center;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: 'geogrotesque', "Helvetica Neue", Arial, sans-serif;
   margin: 0.5rem;
   box-shadow: 0 0 0.3rem rgba(black, 0.3);
 
@@ -11,8 +11,8 @@
   }
 
   &--text {
-    background: $white;
-    color: $red;
+    background: $brown;
+    color: $white;
   }
 
   &--table {
@@ -26,6 +26,9 @@
   &__data {
     &--number {
       font-size: 5rem;
+    }
+    &--bigtext {
+      font-size: 3rem;
     }
   }
 }
