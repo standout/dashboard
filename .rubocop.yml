@@ -1,0 +1,13 @@
+inherit_from:
+  - https://raw.githubusercontent.com/standout/Coding/master/ruby/rubocop.yml
+
+# Project specific settings
+AllCops:
+  TargetRubyVersion: 2.4
+  Exclude:
+    - "bin/*"
+    - config/boot.rb
+    - config/environment.rb
+    - db/schema.rb
+    - Gemfile
+    - Rakefile
