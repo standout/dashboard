@@ -4,6 +4,8 @@ class DashboardsController < ApplicationController
   layout 'application'
 
   def show
-    @data = DataProvider.providers[params[:provider]].fetch
+    provider = DataProvider.providers[params[:provider]]
+    raise ActionController::RoutingError, 'Not Found' unless provider
+    @data = provider.fetch
   end
 end
