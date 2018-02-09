@@ -1,43 +1,8 @@
 <section class="chart chart--table">
-
   <canvas id="myChart" width="400" height="400"></canvas>
+
   <script>
-  window.addEventListener('turbolinks:load', function () {
-    const json_dataset = <%= dataset.to_json.html_safe %>;
-    const dataList = json_dataset['data'].map(array => array[1])
-      .sort(function(a, b){return b-a});
-    const ctx = document.getElementById("myChart").getContext('2d');
-    Chart.defaults.global.defaultFontFamily = "geogrotesque";
-    const myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: json_dataset['data'].map(array => array[0]),
-            datasets: [{
-                label: json_dataset['title'],
-                data: dataList,
-                backgroundColor: [
-                    `#db6052`,
-                    `#db6052`,
-                    `#db6052`,
-                    `#db6052`,
-                    `#db6052`,
-                    `#db6052`
-                ],
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true
-                    }
-                }]
-            }
-        }
-    });
-  })
+    window.jsonDataset = <%= dataset.to_json.html_safe %>;
   </script>
 
   <%= render partial: 'charts/json', locals: { dataset: dataset } %>
