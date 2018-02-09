@@ -16,26 +16,18 @@
                 label: json_dataset['title'],
                 data: dataList,
                 backgroundColor: [
-                    `rgba(219, 96, 82, ${dataList[0]/dataList[0]})`,
-                    `rgba(219, 96, 82, ${dataList[1]/dataList[0]})`,
-                    `rgba(219, 96, 82, ${dataList[2]/dataList[0]})`,
-                    `rgba(219, 96, 82, ${dataList[3]/dataList[0]})`,
-                    `rgba(219, 96, 82, ${dataList[4]/dataList[0]})`,
-                    `rgba(219, 96, 82, ${dataList[5]/dataList[0]})`
+                    `#db6052`,
+                    `#db6052`,
+                    `#db6052`,
+                    `#db6052`,
+                    `#db6052`,
+                    `#db6052`
                 ],
-                borderColor: [
-                    `rgba(219, 96, 82, ${dataList[0]/dataList[0]})`,
-                    `rgba(219, 96, 82, ${dataList[1]/dataList[0]})`,
-                    `rgba(219, 96, 82, ${dataList[2]/dataList[0]})`,
-                    `rgba(219, 96, 82, ${dataList[3]/dataList[0]})`,
-                    `rgba(219, 96, 82, ${dataList[4]/dataList[0]})`,
-                    `rgba(219, 96, 82, ${dataList[5]/dataList[0]})`
-                ],
-                borderWidth: 1
             }]
         },
         options: {
             responsive: true,
+            maintainAspectRatio: false,
             scales: {
                 yAxes: [{
                     ticks: {

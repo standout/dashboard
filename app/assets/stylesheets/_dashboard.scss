@@ -1,23 +1,22 @@
 .dashboard {
-  display: grid;
-  max-height: 100vh;
-  max-width: 100vh;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 1fr 2fr 2fr;
-  grid-auto-flow: dense;
+  width: 100%;
+  height: 100%;
 
   .chart {
+    margin: 0;
+
     &--number {
-      grid-column: span 1;
-      grid-row: span 1;
+
     }
     &--text {
-      grid-column: span 2;
-      grid-row: span 1;
+
     }
     &--table {
-      grid-column: span 3;
-      grid-row: span 3;
+
     }
   }
+}
+
+.dashboard > *, .dashboard > * > canvas {
+  height: 100%;
 }
