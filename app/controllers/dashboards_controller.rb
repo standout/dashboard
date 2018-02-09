@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class DashboardsController < ApplicationController
   layout 'application'
 
@@ -13,9 +11,6 @@ class DashboardsController < ApplicationController
   end
 
   def show
-    provider = DataProvider.providers[params[:provider]]
-    provider = self if params[:provider] =~ /^mock\// && Rails.env.development?
-    raise ActionController::RoutingError, 'Not Found' unless provider
     @data = provider.fetch
   end
 
@@ -47,5 +42,16 @@ class DashboardsController < ApplicationController
         ]
       }
     ].select { |item| item[:type] == type }
+  end
+
+  private
+
+  def provider
+    return self if params[:provider] =~ %r{^mock/} && Rails.env.development?
+    providers[params[:provider]] || providers[:not_found]
+  end
+
+  def providers
+    DataProvider.providers
   end
 end
