@@ -3,6 +3,15 @@
 class DashboardsController < ApplicationController
   layout 'application'
 
+  def index
+    names = DataProvider.providers.to_h.keys.map(&:to_s)
+    current = params[:provider] ||= names.first
+    next_index = (names.index(current) + 1) % names.size
+    @next_provider = names[next_index]
+    show
+    render :show
+  end
+
   def show
     provider = DataProvider.providers[params[:provider]]
     provider = self if params[:provider] =~ /^mock\// && Rails.env.development?
