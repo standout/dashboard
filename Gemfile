@@ -36,6 +36,9 @@ gem 'jbuilder', '~> 2.5'
 # Redis stores for Ruby on Rails http://redis-store.org/redis-rails
 gem 'redis-rails', '~> 5.0'
 
+# Fetch data from FrontApp. Intended for display in a dashboard app.
+gem 'front_data_provider', github: 'standout/front_data_provider'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
