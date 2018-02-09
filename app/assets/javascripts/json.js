@@ -1,7 +1,7 @@
 // Double click on a chart to see the json data in a modal.
 // Double click it or press <Esc> to close it.
 // Only enabled in development.
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbolinks:load', () => {
   const jsonEl = document.querySelector('#json')
   if (!jsonEl) { return }
 
