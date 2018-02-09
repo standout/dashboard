@@ -5,12 +5,13 @@ class DashboardsController < ApplicationController
 
   def show
     provider = DataProvider.providers[params[:provider]]
-    provider = self if params[:provider] == 'mock' && Rails.env.development?
+    provider = self if params[:provider] =~ /^mock\// && Rails.env.development?
     raise ActionController::RoutingError, 'Not Found' unless provider
     @data = provider.fetch
   end
 
   def fetch
+    type = params[:provider][5..-1]
     [
       {
         type: 'number',
@@ -36,6 +37,6 @@ class DashboardsController < ApplicationController
           ['Kevin', 0, 'kevseamountain']
         ]
       }
-    ]
+    ].select { |item| item[:type] == type }
   end
 end
