@@ -14,7 +14,7 @@ GIT
 
 GIT
   remote: https://github.com/standout/github_data_provider.git
-  revision: 6f00844a4e6b8bd2dc5785cf226dfd6c11861c83
+  revision: bab0b5fecc7c8ef1df96c8a1c45d6a06558e018f
   specs:
     github_data_provider (0.1.0)
 
