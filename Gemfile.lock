@@ -12,6 +12,12 @@ GIT
     front_data_provider (1.0.0)
       httparty (~> 0.15)
 
+GIT
+  remote: https://github.com/standout/github_data_provider.git
+  revision: 6f00844a4e6b8bd2dc5785cf226dfd6c11861c83
+  specs:
+    github_data_provider (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -215,6 +221,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   front_data_provider!
+  github_data_provider!
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   minitest (= 5.10.3)
