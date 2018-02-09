@@ -4,16 +4,17 @@ class DashboardsController < ApplicationController
   layout 'application'
 
   def show
-    @data = [
+    @data = send(:"provider_data_#{params[:provider]}")
+  end
+
+  private
+
+  def provider_data_github
+    [
       {
         type: 'number',
         title: 'Antal',
         data: 2
-      },
-      {
-        type: 'text',
-        title: 'Omsättning i Standout (i wish :))',
-        data: '1 000 000 000 SEK'
       },
       {
         type: 'table',
@@ -28,6 +29,16 @@ class DashboardsController < ApplicationController
           ['Ross', 2, 'alex-ross'],
           ['Kevin', 0, 'kevseamountain']
         ]
+      }
+    ]
+  end
+
+  def provider_data_billogram
+    [
+      {
+        type: 'text',
+        title: 'Omsättning i Standout (i wish :))',
+        data: '1 000 000 000 SEK'
       }
     ]
   end
