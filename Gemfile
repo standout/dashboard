@@ -33,6 +33,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Redis stores for Ruby on Rails http://redis-store.org/redis-rails
+gem 'redis-rails', '~> 5.0'
+
+# Fetch data from FrontApp. Intended for display in a dashboard app.
+gem 'front_data_provider', github: 'standout/front_data_provider'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -54,6 +60,11 @@ group :test do
   # Due to an incompability between Rails and Minitest 5.11, we enforce a
   # specific version. See https://github.com/seattlerb/minitest/issues/730.
   gem 'minitest', '5.10.3'
+  # A gem providing "time travel", "time freezing", and "time acceleration"
+  # capabilities, making it simple to test time-dependent code. It provides a
+  # unified method to mock Time.now, Date.today, and DateTime.now in a single
+  # call.
+  gem 'timecop', '~> 0.9'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
