@@ -22,7 +22,7 @@ class DashboardsController < ApplicationController
           headers: ['Namn', 'Antal PRs', 'Användarnamn']
         },
         data: [
-          ['David', 999, 'davidelbe'],
+          ['David', 13, 'davidelbe'],
           ['Emric', 2, 'istanful'],
           ['Tobias', 2, 'sandelius'],
           ['Ross', 2, 'alex-ross'],

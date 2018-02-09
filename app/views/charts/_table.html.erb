@@ -3,14 +3,16 @@ Table
 <canvas id="myChart" width="400" height="400"></canvas>
 <script>
 window.addEventListener('turbolinks:load', function () {
+  var json_dataset = <%= dataset.to_json.html_safe %>;
+  console.log(json_dataset)
   var ctx = document.getElementById("myChart").getContext('2d');
   var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-          labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+          labels: json_dataset['data'].map(array => array[0]),
           datasets: [{
-              label: '# of Votes',
-              data: [12, 19, 3, 5, 2, 3],
+              label: json_dataset['title'],
+              data: json_dataset['data'].map(array => array[1]),
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
