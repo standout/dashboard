@@ -1,4 +1,11 @@
 GIT
+  remote: https://github.com/standout/billogram_data_provider.git
+  revision: 981bf01e22ae5056ee49b19a1cd323018d1d0b89
+  specs:
+    billogram_data_provider (0.1.0)
+      httparty
+
+GIT
   remote: https://github.com/standout/front_data_provider.git
   revision: 2b0280c9d781a5b9719737aa2d954a0faf94cd79
   specs:
@@ -203,6 +210,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  billogram_data_provider!
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
