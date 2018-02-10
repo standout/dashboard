@@ -1,9 +1,16 @@
-<p class="chart table-header"><%= dataset[:title].upcase %></p>
 <section class="chart chart--table">
-  <canvas class="chart--table__canvas" width="400" height="400"></canvas>
-  <script>
-    window.jsonDataset = <%= dataset.to_json.html_safe %>;
-  </script>
+  <div class="chart__inner">
+    <header class="chart__title">
+      <%= dataset[:title].upcase %>
+    </header>
 
-  <%= render partial: 'charts/json', locals: { dataset: dataset } %>
+    <div class="chart__data">
+      <canvas class="chart--table__canvas"></canvas>
+      <script>
+        window.jsonDataset = <%= dataset.to_json.html_safe %>;
+      </script>
+    </div>
+
+    <%= render partial: 'charts/json', locals: { dataset: dataset } %>
+  </div>
 </section>
