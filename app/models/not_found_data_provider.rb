@@ -9,7 +9,11 @@ class NotFoundDataProvider
 
   def fetch
     cache.write(CACHE_COUNT_KEY, count + 1)
-    Response.new(data, Time.now + 1)
+    [{
+      data: "\xF0\x9F\x99\x88",
+      type: 'number',
+      title: title_based_on_count
+    }]
   end
 
   private
@@ -20,14 +24,6 @@ class NotFoundDataProvider
 
   def count
     cache.fetch(CACHE_COUNT_KEY) || 0
-  end
-
-  def data
-    [{
-      data: "\xF0\x9F\x99\x88",
-      type: 'number',
-      title: title_based_on_count
-    }]
   end
 
   def title_based_on_count
