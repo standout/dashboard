@@ -46,9 +46,13 @@ class DashboardsController < ApplicationController
 
   private
 
+  def not_found_provider
+    NotFoundDataProvider.new(cache: Rails.cache)
+  end
+
   def provider
     return self if params[:provider] =~ %r{^mock/} && Rails.env.development?
-    providers[params[:provider]] || providers[:not_found]
+    providers[params[:provider]] || not_found_provider
   end
 
   def providers

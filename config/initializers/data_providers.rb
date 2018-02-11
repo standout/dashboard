@@ -10,7 +10,3 @@ DataProvider.register :'github/pull_requests',
 DataProvider.register :front,
                       FrontDataProvider,
                       token: Rails.application.secrets.front_token
-
-DataProvider.register :not_found,
-                      NotFoundDataProvider,
-                      cache: Rails.cache
